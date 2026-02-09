@@ -13,36 +13,41 @@ export default function ProgressBar() {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // 1. Fetch the data with the cache buster
                 const response = await fetch(csvUrl + '&t=' + Date.now());
-                const reader = response.body.getReader();
-                const result = await reader.read();
-                const decoder = new TextDecoder('utf-8');
-                const csv = decoder.decode(result.value);
+                const text = await response.text();
 
-                Papa.parse(csv, {
-                    complete: (results) => {
-                        // Assume the number is in the second column (Cell B1) of the first row
-                        const data = results.data;
-                        if (data && data[0] && data[0][1]) {
-                            const count = parseInt(data[0][1].replace(/,/g, ''));
-                            if (!isNaN(count)) {
-                                setEmailsSent(count);
-                                animateBar(count);
-                            }
-                        }
+                console.log("Raw Data:", text); // Check your console to see "Total Emails,2"
+
+                // 2. The Fix: Split by comma
+                // If text is "Total Emails,2", parts becomes ["Total Emails", "2"]
+                const parts = text.split(',');
+
+                // 3. Grab the second part (index 1) and turn it into a number
+                if (parts.length >= 2) {
+                    const count = parseInt(parts[1].trim(), 10);
+                    if (!isNaN(count)) {
+                        setEmailsSent(count);
+                        animateBar(count);
                     }
-                });
+                } else {
+                    // Fallback: If it's just a number like "2" without the text
+                    const count = parseInt(text.trim(), 10);
+                    if (!isNaN(count)) {
+                        setEmailsSent(count);
+                        animateBar(count);
+                    }
+                }
+
             } catch (error) {
-                console.error("Error fetching progress data:", error);
+                console.error("Error fetching data:", error);
             }
         };
 
         fetchData();
-        // Poll every 60 seconds
-        const interval = setInterval(fetchData, 60000);
+        const interval = setInterval(fetchData, 30000); // Poll every 30s
         return () => clearInterval(interval);
     }, []);
-
     const animateBar = (count) => {
         const percentage = Math.min((count / goal) * 100, 100);
 
