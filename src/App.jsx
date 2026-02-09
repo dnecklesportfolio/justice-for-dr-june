@@ -27,7 +27,7 @@ function App() {
 
       <footer className="py-12 px-6 border-t border-white/5 text-center space-y-4">
         <p className="text-xs uppercase tracking-widest text-white/30">
-          Paid for by organizing NYC / UpliftBK
+          Paid for by UpliftBK
         </p>
         <p className="text-[10px] text-white/20">
           © 2026 JUSTICE FOR DR. JUNE. ALL RIGHTS RESERVED.
