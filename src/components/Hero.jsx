@@ -16,13 +16,13 @@ export default function Hero() {
 
                 <div className="relative mt-12 overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700 aspect-[4/3] max-w-lg mx-auto border-4 border-justice-white/10">
                     <img
-                        src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop"
-                        alt="Dr. June holding husband's photo"
+                        src="/family.jpeg"
+                        alt="Dr. June and family"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <p className="absolute bottom-4 left-4 right-4 text-sm font-sans uppercase tracking-widest text-justice-white/60">
-                        [Photo: Dr. Karen June & her late husband]
+                        [Photo: Dr. Karen June, her late husband, Joseph & extended family]
                     </p>
                 </div>
             </div>

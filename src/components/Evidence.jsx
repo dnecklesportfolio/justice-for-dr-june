@@ -20,8 +20,8 @@ export default function Evidence() {
                         <p className="font-sans text-gray-400 leading-relaxed border-l-2 border-green-600 pl-4">
                             "My office is committed to protecting homeowners from deed fraud. Today, we celebrate the return of 23 homes to their rightful owners."
                         </p>
-                        <div className="aspect-video bg-gray-900 border border-white/5 flex items-center justify-center p-4 grayscale opacity-50">
-                            <span className="text-[10px] text-center uppercase tracking-widest">[Image: DA Katz at podium celebrating victims]</span>
+                        <div className="aspect-video bg-gray-900 border border-white/5 overflow-hidden grayscale">
+                            <img src="/da-katz.webp" alt="DA Katz at podium celebrating victims" className="w-full h-full object-cover object-top" />
                         </div>
                     </div>
 
@@ -36,8 +36,8 @@ export default function Evidence() {
                         <p className="font-sans text-gray-400 leading-relaxed border-l-2 border-justice-red pl-4">
                             Dr. June remains trapped in legal purgatory, her late husband’s service forgotten, as a predatory financial entity continues to claim her home.
                         </p>
-                        <div className="aspect-video bg-gray-900 border border-white/5 flex items-center justify-center p-4 grayscale">
-                            <span className="text-[10px] text-center uppercase tracking-widest">[Image: Document showing 'Zombie Bank' foreclosure]</span>
+                        <div className="aspect-video bg-gray-900 border border-white/5 overflow-hidden grayscale">
+                            <img src="/summons.jpeg" alt="Court summons document showing foreclosure case" className="w-full h-full object-cover scale-125" />
                         </div>
                     </div>
                 </div>
