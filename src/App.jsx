@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Hero from './components/Hero'
 import ProgressBar from './components/ProgressBar'
 import Evidence from './components/Evidence'
+import CaseFile from './components/CaseFile'
 import ActionButton from './components/ActionButton'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           </p>
         </div>
       </div>
+      <CaseFile />
       <ActionButton />
 
       <footer className="py-12 px-6 border-t border-white/5 text-center space-y-4">
