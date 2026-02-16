@@ -6,7 +6,7 @@ export default function ActionButton() {
     const recipient = "info@queensda.org";
     const cc = "HousingWorkerProtection@queensda.org,QDACommunications@queensda.org,SpeakerAdams@council.nyc.gov,sanders@nysenate.gov,cookv@nyassembly.gov";
     const bcc = "dwayneaneckles@gmail.com";
-    const subject = "CONCERNED: Why is Dr. June being denied the justice you gave others?";
+    const subject = "CONCERNED: DA Katz, why is Dr. June being denied the justice you gave others?";
     const body = `Dear District Attorney Katz,
 
 I just learned about Dr. June’s case and I am shocked that this can go on under your watch. It is deeply disturbing to see the contrast between your office’s recent victory—returning homes to victims of deed fraud on January 28th—and the ongoing nightmare Dr. June is facing. In your February 3rd press release, you stated: “We will not stand by and let property owners lose their homes to fraudsters.”
